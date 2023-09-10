@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./assets/css/com.css">
 
     <!-- Título da Página -->
-    <title>Protocolo Zero Barriga</title>
+    <title>Programa Zero Prisão de Ventre</title>
     
     <style type="text/css">
       body {
@@ -44,13 +44,47 @@
             <!-- VSL -->
             <div id="vid_64f7d527fc6f58000927cfa3" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_64f7d527fc6f58000927cfa3" src="https://images.converteai.net/b10c3aeb-074c-416c-ac40-472ffd4cab15/players/64f7d527fc6f58000927cfa3/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_64f7d527fc6f58000927cfa3" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_64f7d527fc6f58000927cfa3">var s=document.createElement("script");s.src="https://scripts.converteai.net/b10c3aeb-074c-416c-ac40-472ffd4cab15/players/64f7d527fc6f58000927cfa3/player.js",s.async=!0,document.head.appendChild(s);</script>
 
-            <!-- Botão -->
-            <div id="cta1" class="mt-4 d-none">
-              <a href="https://pay.kiwify.com.br/8yj82EU" class="a-btn" style="text-decoration: none;">
-                <span class="span-btn">QUERO OBTER ACESSO!</span>
-                <span class="span-btn2">(atenção: vagas limitadas)</span>
-              </a>
-            </div>
+          <center><!DOCTYPE html>
+<html>
+<head>
+    <title>Simulação de pessoas assistindo apresentação</title>
+    <style>
+        #numero-pessoas {
+            font-family: 'helvetica', sans-serif;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p id="numero-pessoas">376 pessoas estão assistindo agora...</p>
+    <script>
+        // Declare a variável para armazenar o número atual de pessoas
+        let numeroAtual = 376;
+    // Função para atualizar o número de pessoas na tela
+    function atualizarNumeroPessoas() {
+        // Gera um número aleatório de pessoas a entrar ou sair (entre -7 e 7)
+        let pessoas = Math.floor(Math.random() * 14) - 7;
+        
+        // Adiciona o número de pessoas ao número atual
+        numeroAtual += pessoas;
+        
+        // Verifica se o número atual de pessoas está dentro do intervalo permitido (376-427)
+        if (numeroAtual < 376) {
+            numeroAtual = 376;
+        } else if (numeroAtual > 427) {
+            numeroAtual = 427;
+        }
+        
+        // Atualiza o elemento HTML com o novo número de pessoas
+        document.getElementById("numero-pessoas").innerHTML = numeroAtual + " pessoas estão assistindo agora...";
+    }
+    
+    // Chama a função para atualizar o número de pessoas a cada 2 segundos
+    setInterval(atualizarNumeroPessoas, 2000);
+</script>
+</body></center>
+</html>
 
             <!-- Termos de Uso e Política de Privacidade -->
             <div class="text-white mt-4"><a href="termos.html" class="text-white">Termos de Uso</a> | <a href="privacidade.html" class="text-white">Política de Privacidade</a></div>
