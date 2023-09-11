@@ -34,12 +34,39 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
-            <!-- Imagem Ultrasecreto -->
-            <img class="img-fluid" src="./assets/img/ultrasecreto.svg">
-
+            
             <!-- Headline -->
-            <h3 class="my-4"><b>Como um acidente humilhante no berçário da minha filha me levou a descobrir esse segredo japonês para ter um intestino saudável
+            <h3 class="my-4"><b>Como um acidente humilhante no berçário da minha filha me levou a descobrir esse <span style="color:#fff; background-color:#379237;">segredo japonês</span> para ter um intestino saudável
 </b></h3>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .text {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="text">
+    <div style="line-height: 1.0; font-size: 15px"> Hoje <span style="color: red;"><span id="date"></span></span> é o último dia para ver esse vídeo
+    </div>
+    <script>
+      const currentDate = new Date();
+      const day = currentDate.getDate().toString().padStart(2, '0');
+      const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+      const year = currentDate.getFullYear().toString().substr(-2);
+      document.getElementById('date').innerHTML = `${day}/${month}/${year}`;
+    </script>
+  </div>
+</body>
+</html>
+
 
             <!-- VSL -->
             <div id="vid_64f7d527fc6f58000927cfa3" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_64f7d527fc6f58000927cfa3" src="https://images.converteai.net/b10c3aeb-074c-416c-ac40-472ffd4cab15/players/64f7d527fc6f58000927cfa3/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_64f7d527fc6f58000927cfa3" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_64f7d527fc6f58000927cfa3">var s=document.createElement("script");s.src="https://scripts.converteai.net/b10c3aeb-074c-416c-ac40-472ffd4cab15/players/64f7d527fc6f58000927cfa3/player.js",s.async=!0,document.head.appendChild(s);</script>
@@ -51,6 +78,7 @@
     <style>
         #numero-pessoas {
             font-family: 'helvetica', sans-serif;
+            font-weight: bold;
             font-size: 20px;
             color: white;
         }
@@ -86,6 +114,8 @@
 </body></center>
 </html>
 
+<p style="text-align: center; font-weight: bold;">Copyright 2023 - Programa Zero Prisão de Ventre Ⓡ<br><br>Todos os Direitos Reservados</p>
+
             <!-- Termos de Uso e Política de Privacidade -->
             <div class="text-white mt-4"><a href="termos.html" class="text-white">Termos de Uso</a> | <a href="privacidade.html" class="text-white">Política de Privacidade</a></div>
           </div>
@@ -93,10 +123,7 @@
       </div>
     </header>
 
-    <script type="text/javascript">
-      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none")}, 0); // temporização da Call to Action (em milissegundos)
-    </script>
-
+  
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
