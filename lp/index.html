@@ -147,48 +147,7 @@ src="https://www.facebook.com/tr?id=832412158423295&ev=PageView&noscript=1"
             <!-- VSL -->
             <div id="vid_650071a75d41570009438e04" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_650071a75d41570009438e04" src="https://images.converteai.net/b10c3aeb-074c-416c-ac40-472ffd4cab15/players/650071a75d41570009438e04/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_650071a75d41570009438e04" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_650071a75d41570009438e04">var s=document.createElement("script");s.src="https://scripts.converteai.net/b10c3aeb-074c-416c-ac40-472ffd4cab15/players/650071a75d41570009438e04/player.js",s.async=!0,document.head.appendChild(s);</script>
 
-          <center><!DOCTYPE html>
-<html>
-<head>
-    <title>Simulação de pessoas assistindo apresentação</title>
-    <style>
-        #numero-pessoas {
-            font-family: 'helvetica', sans-serif;
-            font-weight: bold;
-            font-size: 20px;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <p id="numero-pessoas">376 pessoas estão assistindo agora...</p>
-    <script>
-        // Declare a variável para armazenar o número atual de pessoas
-        let numeroAtual = 376;
-    // Função para atualizar o número de pessoas na tela
-    function atualizarNumeroPessoas() {
-        // Gera um número aleatório de pessoas a entrar ou sair (entre -7 e 7)
-        let pessoas = Math.floor(Math.random() * 14) - 7;
-        
-        // Adiciona o número de pessoas ao número atual
-        numeroAtual += pessoas;
-        
-        // Verifica se o número atual de pessoas está dentro do intervalo permitido (376-427)
-        if (numeroAtual < 376) {
-            numeroAtual = 376;
-        } else if (numeroAtual > 427) {
-            numeroAtual = 427;
-        }
-        
-        // Atualiza o elemento HTML com o novo número de pessoas
-        document.getElementById("numero-pessoas").innerHTML = numeroAtual + " pessoas estão assistindo agora...";
-    }
-    
-    // Chama a função para atualizar o número de pessoas a cada 2 segundos
-    setInterval(atualizarNumeroPessoas, 2000);
-</script>
-</body></center>
-</html>
+          
 
 <!-- Notificação de compra -->
 <script src="https://cdn.jsdelivr.net/npm/notiflix@2.6.0/dist/notiflix-aio-2.6.0.min.js"></script>
