@@ -17,8 +17,14 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=906338273963604&ev=PageView&noscript=1"
 /></noscript>
 
-<head>
-    <title>Exemplo de botão com redirecionamento</title>
+<style>
+        .container p {
+            color: white; /* Define a cor do texto como branco */
+            text-align: center; /* Centraliza o texto */
+        }
+    </style>
+
+    <!--Exemplo de botão com redirecionamento-->
     <style>
         .popup {
             display: none;
@@ -59,27 +65,44 @@ src="https://www.facebook.com/tr?id=906338273963604&ev=PageView&noscript=1"
             justify-content: center;
         }
 
-        button img {
-            user-select: none;
-        }
+    
         
-        button {
-            border: none;
+         .custom-button {
+            background-color: var(--cor_fundo_botao_vsl);
+            color: var(--cor_texto_botao_vsl);
+            font-family: Arial;
+            font-size: 3vh;
+            font-weight: 800;
+            font-style: normal;
+            text-decoration: none;
+            padding: 20px 50px;
+            border: 0px solid #000;
+            border-radius: 10px;
+            display: inline-block;
         }
-        
-        .custom-button {
-            width: 350px;
-            height: 70px;
-            background-color: black;
-            color: white;
-            font-size: 20px;
-            font-family: 'Poppins', sans-serif;
-            border-radius: 5px;
-        }
-        
         .custom-button:hover {
-            cursor: pointer;
-            background-color: black;
+            background-color: #52d871;
+        }
+        .custom-button:active {
+            transform: scale(0.95);
+        }
+        @media (max-width: 1200px) {
+            .botao {
+                background-color: #0ed353;
+                color: #fff;
+            }
+        }
+        @media (max-width: 640px) {
+            .custom-button {
+                background-color: #0ed353;
+                color: #fff;
+                width: 75%;
+            }
+        }
+        /* Estilos para centralizar */
+        .container {
+            text-align: center;
+            margin-top: 1vh; /* ajuste conforme necessário */
         }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
@@ -370,6 +393,7 @@ border-radius: 8px !important;
 
 <!--Embed Vturb-->
 
+
 <div style="position:relative;">
     <div style="position:absolute;top:10px;left:10px;background-color:red;color:white;padding:5px;border-radius:5px;z-index:1;font-size:20px;">🔴 <span id="number"></span> ao vivo</div>
     <div id="vid_65c29e5ff80dfa0008f3628d" style="position:relative;width:100%;padding: 56.25% 0 0;">
@@ -383,7 +407,6 @@ border-radius: 8px !important;
     s.async = !0;
     document.head.appendChild(s);
 </script>
-
 <!--Fim Embed Vturb-->
 
 </div>
@@ -877,19 +900,19 @@ console.log('Mostrar comentários em:', tempoTotal, 'milissegundos - totalizando
 
 <!--Botão Seleciona Vagas Disponíceis-->
 
-<body>
+
     <button onclick="showPopup()" class="custom-button">Comprar Agora</button>
 
     <div id="popup" class="popup">
         <div class="popup-content">
-            <p>Últimas <span id="vagas-disponiveis">7</span> vagas disponíveis</p>
+            <p>Últimas <span id="vagas-disponiveis">21</span> vagas disponíveis</p>
             <p id="redirect-message" class="redirect-message"></p>
         </div>
     </div>
 
     <script>
         function showPopup() {
-            var vagas = 7;
+            var vagas = 21;
             var vagasDisponiveis = document.getElementById("vagas-disponiveis");
             var redirectMessage = document.getElementById("redirect-message");
 
@@ -897,12 +920,12 @@ console.log('Mostrar comentários em:', tempoTotal, 'milissegundos - totalizando
 
             var interval = setInterval(function() {
                 vagas--;
-                if (vagas === 2) {
+                if (vagas === 16) {
                     clearInterval(interval);
                     redirectMessage.innerHTML = "Encontramos uma vaga, vamos te redirecionar...";
                     redirectMessage.classList.add("redirect-message");
                     setTimeout(function() {
-                        window.location.href = "https://google.com";
+                        window.location.href = "https://pay.kiwify.com.br/IubcTrk";
                     }, 4000);
                 } else {
                     vagasDisponiveis.innerHTML = vagas;
