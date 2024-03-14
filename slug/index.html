@@ -369,7 +369,21 @@ border-radius: 8px !important;
 
 
 <!--Embed Vturb-->
-<div id="vid_65c29e5ff80dfa0008f3628d" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_65c29e5ff80dfa0008f3628d" src="https://images.converteai.net/8b55604e-41f3-417b-a68a-422bcd57bd54/players/65c29e5ff80dfa0008f3628d/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_65c29e5ff80dfa0008f3628d" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_65c29e5ff80dfa0008f3628d">var s=document.createElement("script");s.src="https://scripts.converteai.net/8b55604e-41f3-417b-a68a-422bcd57bd54/players/65c29e5ff80dfa0008f3628d/player.js",s.async=!0,document.head.appendChild(s);</script>
+
+<div style="position:relative;">
+    <div style="position:absolute;top:10px;left:10px;background-color:red;color:white;padding:5px;border-radius:5px;z-index:1;font-size:20px;">🔴 <span id="number"></span> ao vivo</div>
+    <div id="vid_65c29e5ff80dfa0008f3628d" style="position:relative;width:100%;padding: 56.25% 0 0;">
+        <img id="thumb_65c29e5ff80dfa0008f3628d" src="https://images.converteai.net/8b55604e-41f3-417b-a68a-422bcd57bd54/players/65c29e5ff80dfa0008f3628d/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">
+        <div id="backdrop_65c29e5ff80dfa0008f3628d" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div>
+    </div>
+</div>
+<script type="text/javascript" id="scr_65c29e5ff80dfa0008f3628d">
+    var s = document.createElement("script");
+    s.src = "https://scripts.converteai.net/8b55604e-41f3-417b-a68a-422bcd57bd54/players/65c29e5ff80dfa0008f3628d/player.js";
+    s.async = !0;
+    document.head.appendChild(s);
+</script>
+
 <!--Fim Embed Vturb-->
 
 </div>
@@ -836,6 +850,7 @@ var tempoTotal = (minutos * 0) + (segundos * 5);
 setTimeout(mostrarComentarios, tempoTotal);
 console.log('Mostrar comentários em:', tempoTotal, 'milissegundos - totalizando', minutos, 'minutos e', segundos, 'segundos');
 </script>
+<!-- Fim notificação de compra -->
 
 <style>
   #aparecer1,
@@ -896,7 +911,21 @@ console.log('Mostrar comentários em:', tempoTotal, 'milissegundos - totalizando
         }
     </script>
 
-<!-- Fim notificação de compra -->
+
+<script>
+function add(){number+=Math.floor((Math.random()*6)+1);document.getElementById("number").innerHTML=number;setTimeout("add()",10000);}        
+function generate(){number=Math.floor(Math.random()*1143)+1578;document.getElementById("number").innerHTML=number;add();}
+generate();</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script language="javascript">
+var getdayNames = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira","Quinta-Feira", "Sexta-Feira", "Sábado");
+var getdayMonth = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho","Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+var getNow = new Date();
+var dayOfTheWeek = getNow.getDay();
+getNow.setTime(getNow.getTime() - 0 * 24 * 60 * 60 * 1000);
+var value = getdayNames[(getNow.getDay())] + ", " + getNow.getDate() + " de " + getdayMonth[(getNow.getMonth())] + " " + " de " + getNow.getFullYear();
+$(".descounttime").html(value);
+</script>
 
 <!--
 <script>
