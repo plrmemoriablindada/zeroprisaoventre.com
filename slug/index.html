@@ -17,95 +17,6 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=906338273963604&ev=PageView&noscript=1"
 /></noscript>
 
-<style>
-        .container p {
-            color: white; /* Define a cor do texto como branco */
-            text-align: center; /* Centraliza o texto */
-        }
-    </style>
-
-    <!--Exemplo de botão com redirecionamento-->
-    <style>
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: transparent;
-            z-index: 1;
-        }
-
-        .popup-content {
-            width: 300px;
-            height: 200px;
-            background-color: black;
-            margin: auto;
-            margin-top: 20%;
-            padding: 20px;
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            font-size: 20px;
-            color: #fff;
-        }
-
-        .popup-content span {
-            color: red;
-        }
-
-        .popup-content .redirect-message {
-            font-weight: bold;
-            color: #00FF7F;
-        }
-
-        .popup.show {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-    
-        
-         .custom-button {
-            background-color: var(--cor_fundo_botao_vsl);
-            color: var(--cor_texto_botao_vsl);
-            font-family: Arial;
-            font-size: 3vh;
-            font-weight: 800;
-            font-style: normal;
-            text-decoration: none;
-            padding: 20px 50px;
-            border: 0px solid #000;
-            border-radius: 10px;
-            display: inline-block;
-        }
-        .custom-button:hover {
-            background-color: #52d871;
-        }
-        .custom-button:active {
-            transform: scale(0.95);
-        }
-        @media (max-width: 1200px) {
-            .botao {
-                background-color: #0ed353;
-                color: #fff;
-            }
-        }
-        @media (max-width: 640px) {
-            .custom-button {
-                background-color: #0ed353;
-                color: #fff;
-                width: 75%;
-            }
-        }
-        /* Estilos para centralizar */
-        .container {
-            text-align: center;
-            margin-top: 1vh; /* ajuste conforme necessário */
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 
 <!-- End Meta Pixel Code -->
 
@@ -898,41 +809,6 @@ console.log('Mostrar comentários em:', tempoTotal, 'milissegundos - totalizando
   console.log('p. em:', tpitch, 'ms - totalizando', tmin, 'minutos', 'e', tseg, 'segundos');
 </script>
 
-<!--Botão Seleciona Vagas Disponíceis-->
-
-
-    <button onclick="showPopup()" class="custom-button">Comprar Agora</button>
-
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <p>Últimas <span id="vagas-disponiveis">21</span> vagas disponíveis</p><br>
-            <p id="redirect-message" class="redirect-message"></p>
-        </div>
-    </div>
-
-    <script>
-        function showPopup() {
-            var vagas = 21;
-            var vagasDisponiveis = document.getElementById("vagas-disponiveis");
-            var redirectMessage = document.getElementById("redirect-message");
-
-            document.getElementById("popup").classList.add("show");
-
-            var interval = setInterval(function() {
-                vagas--;
-                if (vagas === 16) {
-                    clearInterval(interval);
-                    redirectMessage.innerHTML = "Encontramos uma vaga, vamos te redirecionar...";
-                    redirectMessage.classList.add("redirect-message");
-                    setTimeout(function() {
-                        window.location.href = "https://pay.kiwify.com.br/IubcTrk";
-                    }, 4000);
-                } else {
-                    vagasDisponiveis.innerHTML = vagas;
-                }
-            }, 1000);
-        }
-    </script>
 
 
 <script>
